@@ -1,10 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { persistStore, persistReducer } from "redux-persist"
 import storage from "redux-persist/lib/storage"
-import  appSlice  from './slices/appSlice'
+import appSlice from './slices/appSlice'
+import todoSlice from './slices/todoSlice'
 
 const rootReducer = combineReducers({
-   app:appSlice
+    app: appSlice,
+    todo: todoSlice
 })
 
 const persistConfig = {

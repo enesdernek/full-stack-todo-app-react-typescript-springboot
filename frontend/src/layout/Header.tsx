@@ -10,11 +10,13 @@ import type { RootState } from '../redux/store';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { changeTheme } from '../redux/slices/appSlice';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
 
     const dispatch = useDispatch()
     const theme = useSelector((state: RootState) => state.app.theme)
+    const navigate = useNavigate()
 
     const backgroundColor = theme === "dark" ? "#121212" : "#FAFAFA"
     const color = theme === "light" ? "#121212" : "#FAFAFA"
@@ -25,7 +27,7 @@ function Header() {
                 <Container>
 
                     <Toolbar>
-                        <IconButton
+                        <IconButton onClick={()=>navigate("/")}
                             size="large"
                             edge="start"
                             color="inherit"

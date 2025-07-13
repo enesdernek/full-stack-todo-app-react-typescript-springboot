@@ -1,6 +1,10 @@
 import { Box, Button } from "@mui/material"
+import { useNavigate } from "react-router-dom"
 
 function WelcomePage() {
+
+  const navigate = useNavigate()
+
   return (
     <Box
       sx={{
@@ -16,7 +20,7 @@ function WelcomePage() {
         }}
       >
         <h2>Welcome To Todo App!</h2>
-        <Button
+        <Button onClick={()=>navigate("/todolist")}
           variant="contained"
           color="warning"
           sx={{ mt: 2 }} 

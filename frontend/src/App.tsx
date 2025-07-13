@@ -27,10 +27,6 @@ function App() {
     }
   }, [backgroundColor, color])
 
-  useEffect(() => {
-    console.log(theme)
-  }, [theme])
-
   return (
     <Box sx={{ minHeight: "100vh" }}>
       <Header />
