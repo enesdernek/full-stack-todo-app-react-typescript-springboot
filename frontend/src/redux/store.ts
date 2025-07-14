@@ -4,6 +4,7 @@ import storage from "redux-persist/lib/storage"
 import appSlice from './slices/appSlice'
 import todoSlice from './slices/todoSlice'
 
+
 const rootReducer = combineReducers({
     app: appSlice,
     todo: todoSlice

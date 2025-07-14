@@ -18,7 +18,7 @@ import com.example.todoapp.dto.TodoDto;
 import com.example.todoapp.dto.TodoDtoIU;
 import com.example.todoapp.service.concretes.TodoService;
 
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/todo")
 public class TodoController {
@@ -47,7 +47,8 @@ public class TodoController {
 	}
 	
 	@GetMapping("get-all-by-date-desc")
-	public ResponseEntity<List<TodoDto>> getAllByDateDesc(){
+	public ResponseEntity<List<TodoDto>> getAllByDateDesc() throws InterruptedException{
+		Thread.sleep(1000);
 		return new ResponseEntity<>(this.todoService.getAllByDateDesc(),HttpStatus.OK);
 	}
 
