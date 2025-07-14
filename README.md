@@ -24,28 +24,6 @@ Bu proje, **React**, **TypeScript**, **Redux**, **Redux Persist**, **React Route
 
 ---
 
-## 📂 Proje Yapısı
-
-fullstack-todo-app/
-├── backend/ (Spring Boot)
-│ ├── src/
-│ │ └── main/java/com/example/todo/
-│ │ ├── controller/
-│ │ ├── service/
-│ │ ├── entity/
-│ │ └── repository/
-| | └── dto/
-│ └── application.properties
-├── frontend/ (React + TS)
-│ ├── src/
-│ │ ├── components/
-│ │ ├── layout/
-│ │ ├── redux/
-│ │ └── App.tsx
-└── README.md
-
----
-
 ## 🛠️ Kurulum
 
 ### 🔧 Backend Kurulumu (Spring Boot)
